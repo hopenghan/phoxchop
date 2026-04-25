@@ -1,0 +1,335 @@
+/* =============================================
+   GLOBAL SETTINGS
+   ============================================= */
+
+/* This ensures all elements calculate width correctly */
+* {
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 1. Define a consistent color palette using variables */
+:root {
+  --background-color: #F6F2EC; /* A soft off-white */
+  --text-color: #333333;       /* Dark grey, much easier on the eyes than pure black */
+  --accent-color: #CD7F32;     /* A warm, subtle orange for a 'phox' vibe */
+  --light-grey: #e0e0e0;
+  --highlight-color: #8B3A2A;  /* deep terracotta */
+  --sidebar-background: #EDE8DF;
+}
+
+/* 2. Basic Body Setup */
+body {
+  font-family: Tahoma, sans-serif;
+  font-size: 17px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* Remove underline on links by default */
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+/* The "Box Highlight" effect when mouse hovers */
+a:hover,
+a.active {
+  background-color: var(--highlight-color);
+  color: white;
+}
+
+h2 {
+  /* Stops the heading from hiding under the sticky header when jumped to */
+  scroll-margin-top: 100px;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  border-bottom: 1px solid var(--light-grey);
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+}
+
+
+/* =============================================
+   HEADER
+   ============================================= */
+
+header {
+  background-color: var(--background-color);
+  width: 100%;
+  padding: 32px 0 0;
+  min-height: 160px;
+
+  /* Stack logo+name and then nav links vertically, all centered */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Wraps the circle logo and the site name side by side */
+.header-inner {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+/* Circle logo placeholder — swap this for an <img> when you have one */
+.logo-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  flex-shrink: 0;
+  /* Optional: a subtle inner ring */
+  border: 2px solid var(--background-color);
+  outline: 2px solid var(--accent-color);
+}
+
+/* Site name next to the logo */
+header h1 {
+  margin: 0;
+  font-size: 2rem; /* restored to browser default — was 1.8rem which made it slightly smaller */
+  color: var(--text-color);
+}
+
+/* Nav links sit below the logo + name row */
+header nav {
+  display: flex;
+  gap: 4px;
+  margin-top: auto; /* pushes nav to the bottom of the header */
+  background-color: var(--accent-color);
+  padding: 0px 16px;
+  border-radius: 0px;
+  width: 100%;
+  justify-content: center; 
+  align-items: stretch;
+  overflow: hidden;
+  gap: 0;
+}
+
+header nav a {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  padding: 10px 12px;
+  border-radius: 0px;
+  transition: 0.3s;
+}
+
+header nav a:hover {
+  background-color: var(--highlight-color);
+  color: white;
+}
+
+
+/* =============================================
+   LAYOUT
+   ============================================= */
+
+/* Side-by-side layout using Flexbox */
+.layout-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Style the sidebar */
+.sidebar {
+  flex: 1;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  min-width: 200px;
+  padding: 20px 0;
+  border-right: 1px solid var(--light-grey);
+
+  display: flex;
+  flex-direction: column;
+
+  /* Sticky: sidebar stays visible as you scroll */
+  background-color: var(--sidebar-background);
+  border: 1px solid var(--light-grey);
+  border-radius: 6px;
+  margin: 0 12px;
+  height: fit-content; /* remove 100vh so box wraps content tightly */
+  position: sticky;
+  top: 20px;
+
+  color: var(--accent-color);
+}
+
+.sidebar-nav {
+  width: 100%;
+  padding-top: 32px; /* reserved space where Table of Contents used to be */
+}
+
+/* Stack sidebar links vertically */
+.sidebar-nav a {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  color: var(--accent-color);
+  font-weight: bold; /* bolded sidebar items */
+  transition: 0.3s;
+}
+
+/* Explicit hover rule needed here — without it, the more specific
+   .sidebar-nav a selector above overrides the global a:hover color */
+.sidebar-nav a:hover {
+  background-color: var(--highlight-color);
+  color: white;
+}
+
+/* Style the main content area */
+main {
+  flex: 3;
+  padding-left: 40px;
+}
+
+/* Cards for posts */
+.post-section {
+  margin-bottom: 40px;
+}
+
+.post-section h3 {
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--light-grey);
+  padding-bottom: 6px;
+}
+
+.card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card {
+  display: block;
+  background-color: var(--sidebar-background);
+  border: 1px solid var(--light-grey);
+  border-radius: 6px;
+  padding: 14px 18px;
+  transition: 0.2s;
+  color: var(--text-color);
+}
+
+.card:hover {
+  border-color: var(--accent-color);
+  background-color: transparent; /* prevents the global hover box from firing */
+  color: var(--text-color);
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.card-desc {
+  font-size: 0.88rem;
+  color: #777;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.card:hover .card-desc {
+  max-height: 100px; /* any value larger than your description will ever be */
+}
+
+.sidebar p {
+  color: var(--text-color);
+  padding: 0 20px;
+  font-size: 0.9rem;  
+}
+
+.external-link {
+  color: #800080;
+}
+
+.external-link:hover {
+  background-color: transparent;
+  color: var(--accent-color); /* slightly darker bronze — signals interactivity without a box */
+}
+
+.external-link::after {
+  font-family: 'Font Awesome 6 Free';
+  content: '\f08e'; /* the classic box-and-arrow external link icon */
+  font-weight: 900;
+  font-size: 0.7em;
+  vertical-align: super;
+  margin-left: 2px;
+}
+/* =============================================
+   FOOTER
+   ============================================= */
+
+footer {
+  border-top: 1px solid var(--light-grey);
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 1em;
+}
+
+
+/* =============================================
+   MISC
+   ============================================= */
+
+/* Style the date label on posts */
+.date {
+  color: gray;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+/* links in text appear different */
+.inline-link {
+  color: #7B5EA7; /* muted purple — readable on your off-white, distinct from bronze */
+}
+
+.inline-link:hover {
+  background-color: transparent;
+  color: #7B5EA7;
+  text-decoration: underline;
+}
+
+html {
+  overflow-y: scroll; /* always reserves scrollbar space, even on short pages */
+}
+
+.contact-btn {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.contact-btn:hover {
+  background-color: #B56A20;
+  color: white;
+}

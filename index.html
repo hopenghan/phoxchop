@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>Phoxchop's blog</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- FIXED: header is now correctly inside <body> -->
+  <header>
+    <div class="header-inner">
+      <!-- Circle logo placeholder — replace the div with an <img> later -->
+      <div class="logo-circle"></div>
+      <h1>Phoxchop</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html">Personal Finance</a>
+      <a href="posts.html">Posts</a>
+    </nav>
+  </header>
+
+  <div class="layout-container">
+
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <!-- Table of Contents heading removed — space reserved above first link via CSS -->
+        <a href="#About">About</a>
+        <a href="#Perfin">Personal Finance</a>
+      </nav>
+    </aside>
+
+    <main>
+      <article>
+        <h2 id="About">About</h2>
+        <p class="date">April 24, 2026</p>
+        <p>Hi, welcome to this little corner of the internet! I am a Singaporean graduate student that enjoys learning new things. I started this blog to have a space to write and share about all the stuff I have learned in my free time. Since this is an outlet for me to write freely, forgive me if I get some things wrong or fail to reference sources. Hopefully you enjoy your time here, and learn something new. Feel free to reach out if you want to have a chat!</p>
+        <p><i>Note: I update this page with new posts/pages/links/resources, check back here if you want to see if there's anything new.</i></p>
+        <p>Happy reading!</p>
+
+        <section class="post-section">
+        <h2 id="Perfin">Personal Finance</h2>
+        <p>These articles are a result of research for managing my own finances. I try to explain every step of the reasoning so beginners still can understand them. I have tried to roughly put them in the order I recommend reading.</p>
+          <div class="card-grid">
+            <a href="summary-of-investment.html" class="card">
+              <div class="card-title">Personal investment philosophy</div>
+              <div class="card-desc">A short summary of my approach to investing.</div>
+            </a>
+          
+
+            <a href="where-to-start.html" class="card">
+              <div class="card-title">Where to start?</div>
+              <div class="card-desc">A visual map of the most important parts of managing your own finances, and an introduction to some commonly used terms.</div>
+            </a>
+          </div>
+        <p>A few other work in progress articles...</p>
+
+          <div class="card-grid">
+            <a href="insurance.html" class="card">
+              <div class="card-title">Insurance</div>
+              <div class="card-desc">The role of insurance in personal finance, and how you should think about using it.</div>
+            </a>
+          </div>
+        </section>
+
+        <h3 id="Tools">Useful planning tools</h3>
+          <ul>
+            <li><a href="https://tpawplanner.com/plan" class="external-link" target="_blank" rel="noopener noreferrer">TPAW Planner</a> A retirement planning tool by Dr. Ben Matthew.</li>
+            <li><a href="https://www.portfoliovisualizer.com/" class="external-link" target="_blank" rel="noopener noreferrer">Portfolio Visualizer</a> A tool for testing various portfolios.</li>
+            <li><a href="https://www.moneyowl.com.sg/tools-calculators/" class="external-link" target="_blank" rel="noopener noreferrer">MoneyOwl financial calculators</a></li>
+            <li><a href="https://ifl.org.sg/calculators/" class="external-link" target="_blank" rel="noopener noreferrer">MoneySense financial calculators</a></li>
+            <li><a href="https://www.mas.gov.sg/monetary-policy/cpi-inflation-calculator" class="external-link" target="_blank" rel="noopener noreferrer">MAS Singapore inflation calculator</a></li>
+            <li><a href="https://www.cpf.gov.sg/member/tools-and-services/calculators" class="external-link" target="_blank" rel="noopener noreferrer">CPF calculators</a></li>
+            <li><a href="https://www.akashkanojia.com/guides/personal-balance-sheet-template/" class="external-link" target="_blank" rel="noopener noreferrer">Balance sheet</a> that I use by Dr. Akash Kanojia.</li>
+          </ul>     
+
+        <h3 id="Links">Useful external resources</h3>
+          <ul>
+            <li><a href="https://www.mas.gov.sg/-/media/mas-media-library/news/media-releases/2023/basic-financial-planning-guide-2023.pdf" class="external-link" target="_blank" rel="noopener noreferrer">MAS basic financial planning guide</a></li>
+            <li><a href="https://persfin.hsites.harvard.edu/sched" class="external-link" target="_blank" rel="noopener noreferrer">Harvard's basic financial planning workshop with free slides</a></li>
+          </ul>    
+
+      </article>
+    </main>
+
+  </div><!-- end .layout-container -->
+
+  <!-- FIXED: footer is now outside .layout-container, so it sits below everything -->
+  <footer>
+    <a href="mailto:phoxchop@gmail.com" class="contact-btn">Contact Me</a>
+  </footer>
+
+</body>
+</html>
