@@ -24,7 +24,7 @@ html {
 
 /* 2. Basic Body Setup */
 body {
-  font-family: Tahoma, sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 17px;
   background-color: var(--background-color);
   color: var(--text-color);
