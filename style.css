@@ -93,7 +93,7 @@ header {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background-color: var(--accent-color);
+  object-fit: cover;
   flex-shrink: 0;
   /* Optional: a subtle inner ring */
   border: 2px solid var(--background-color);
