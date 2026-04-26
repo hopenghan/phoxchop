@@ -10,17 +10,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <!-- Nunito -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-<! OR Inter (very high x-height, clean) -->
+<!-- Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<!-- Cormorant Garamond -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+  <!-- HEADER -->
   <header>
     <div class="header-inner">
-      <!-- Circle logo placeholder — replace the div with an <img> later -->
-      <div class="logo-circle"></div>
-      <h1>Phoxchop</h1>
+      <!-- Circle logo placeholder -->
+      <img src="logo.png" alt="Phoxchop logo" class="logo-circle">
+      <p class="site-name">Phoxchop</p>
     </div>
     <nav>
       <a href="index.html">Home</a>
@@ -29,6 +32,7 @@
     </nav>
   </header>
 
+  <!-- SIDEBAR -->
   <div class="layout-container">
 
     <aside class="sidebar">
@@ -37,9 +41,10 @@
       </nav>
     </aside>
 
+    <!-- MAIN BODY -->
     <main>
       <article>
-        <h2>Investment Philosophy</h2>
+        <h1>Investment Philosophy</h1>
         <p>This blog post is mostly dedicated to understanding concepts in a deeper and more rigorous manner. But I also think it is useful to condense important information into a short piece. So here's a quick brief on what I think an appropriately risky investment should look like:</p>
         <ol>
           <li> Buy all the stocks.</li>
@@ -58,8 +63,14 @@
 
   </div>
 
+  <!-- FOOTER -->
   <footer>
-    <a href="mailto:phoxchop@gmail.com" class="contact-btn">Contact Me</a>
+    <div class="footer-inner">
+    <div class="footer-nav">
+      <a href="where-to-start.html" class="page-btn">← Previous: Where to start?</a> <!-- leave empty string for first page -->
+      <a href="placeholder" class="page-btn">Next: Investing for beginners →</a>
+    </div>
+      <a href="mailto:phoxchop@gmail.com" class="contact-btn">Contact Me</a>
   </footer>
 
 </body>

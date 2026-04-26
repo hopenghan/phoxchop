@@ -10,18 +10,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <!-- Nunito -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-<! OR Inter (very high x-height, clean) -->
+<!-- Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<!-- Cormorant Garamond -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- FIXED: header is now correctly inside <body> -->
+  <!-- HEADER -->
   <header>
     <div class="header-inner">
-      <!-- Circle logo placeholder — replace the div with an <img> later -->
+      <!-- Circle logo -->
       <img src="logo.png" alt="Phoxchop logo" class="logo-circle">
-      <h1>Phoxchop</h1>
+      <p class="site-name">Phoxchop</p>
     </div>
     <nav>
       <a href="index.html">Home</a>
@@ -30,6 +32,7 @@
     </nav>
   </header>
 
+  <!-- SIDEBAR -->
   <div class="layout-container">
 
     <aside class="sidebar">
@@ -38,11 +41,14 @@
         <a href="#About">About</a>
         <a href="#Perfin">Personal Finance</a>
       </nav>
+
+    
     </aside>
 
-    <main>
-      <article>
-        <h2 id="About">About</h2>
+  <!-- MAIN BODY -->
+  <main>
+    <article>
+      <h2 id="About">About</h2>
         <p>Hi, welcome to this little corner of the internet! I am a Singaporean graduate student that enjoys learning new things. I started this blog to have a space to write and share about all the stuff I have learned in my free time. Since this is an outlet for me to write freely, forgive me if I get some things wrong or fail to reference sources. Hopefully you enjoy your time here, and learn something new. Feel free to reach out if you want to have a chat!</p>
         <p><i>Note: I update this page with new posts/pages/links/resources, check back here if you want to see if there's anything new.</i></p>
         <p>Happy reading!</p>
@@ -51,15 +57,15 @@
         <h2 id="Perfin">Personal Finance</h2>
         <p>These articles are a result of research for managing my own finances. I try to explain every step of the reasoning so beginners still can understand them. I have tried to roughly put them in the order I recommend reading.</p>
           <div class="card-grid">
-            <a href="summary-of-investment.html" class="card">
-              <div class="card-title">Personal investment philosophy</div>
-              <div class="card-desc">A short summary of my approach to investing.</div>
-            </a>
-          
-
+                    
             <a href="where-to-start.html" class="card">
               <div class="card-title">Where to start?</div>
               <div class="card-desc">A visual map of the most important parts of managing your own finances, and an introduction to some commonly used terms.</div>
+            </a>
+
+            <a href="summary-of-investment.html" class="card">
+              <div class="card-title">Personal investment philosophy</div>
+              <div class="card-desc">A short summary of my approach to investing.</div>
             </a>
           </div>
         <p>A few other work in progress articles...</p>
@@ -90,11 +96,11 @@
           </ul>    
 
       </article>
-    </main>
+  </main>
 
   </div><!-- end .layout-container -->
 
-  <!-- FIXED: footer is now outside .layout-container, so it sits below everything -->
+  <!-- FOOTER -->
   <footer>
     <a href="mailto:phoxchop@gmail.com" class="contact-btn">Contact Me</a>
   </footer>

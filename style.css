@@ -283,11 +283,43 @@ main {
    ============================================= */
 
 footer {
+  max-width: 1000px;
   border-top: 1px solid var(--light-grey);
   text-align: center;
-  margin-top: 40px;
-  padding: 20px;
+  margin: 40px auto 0;
+  padding: 20px 20px;
   font-size: 1em;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.page-btn {
+  font-weight: bold;
+  color: var(--accent-color);
+  padding: 6px 14px;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.page-btn:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.invisible {
+  visibility: hidden; /* takes up space but not visible */
 }
 
 
@@ -331,4 +363,66 @@ html {
 .contact-btn:hover {
   background-color: #B56A20;
   color: white;
+}
+
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+details {
+  border-bottom: 1px solid var(--light-grey);
+  padding: 10px 0;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--text-color);
+  list-style: none; /* removes the default triangle on some browsers */
+}
+
+summary::-webkit-details-marker {
+  display: none; /* removes the default triangle on Chrome/Safari */
+}
+
+summary::before {
+  content: '+ ';
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+details[open] summary::before {
+  content: '− '; /* changes to minus when open */
+}
+
+dd {
+  margin: 8px 0 0 0;
+  padding: 8px 0 0 12px;
+  border-left: 2px solid var(--accent-color);
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+.full-bleed-img {
+  margin-left: -350px; /* roughly the width of your sidebar + its padding */
+  max-width: calc(100% + 450px);
+}
+
+.site-name {
+  font-family: 'Cormorant Garamond', serif; /* or whichever font you chose */
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  font-style: italic;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif; /* can be same or different from body */
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent-color); /* bronze tint to distinguish it */
+  border-bottom: 1px solid var(--light-grey);
+  padding-bottom: 8px;
+  margin-bottom: 4px;
 }
