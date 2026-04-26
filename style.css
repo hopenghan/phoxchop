@@ -109,7 +109,6 @@ header h1 {
 /* Nav links sit below the logo + name row */
 header nav {
   display: flex;
-  gap: 4px;
   margin-top: auto; /* pushes nav to the bottom of the header */
   background-color: var(--accent-color);
   padding: 0px 16px;
@@ -117,7 +116,7 @@ header nav {
   width: 100%;
   justify-content: center; 
   align-items: stretch;
-  overflow: hidden;
+  overflow: visible;
   gap: 0;
 }
 
@@ -132,7 +131,7 @@ header nav a {
 }
 
 header nav a:hover {
-  background-color: var(--highlight-color);
+  background-color: #B56A20;
   color: white;
 }
 
@@ -425,4 +424,42 @@ h1 {
   border-bottom: 1px solid var(--light-grey);
   padding-bottom: 8px;
   margin-bottom: 4px;
+}
+
+.dropdown {
+  position: relative; /* anchors the dropdown menu to this element */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* sits just below the nav bar */
+  left: 0;
+  right: 0;
+  background-color: var(--accent-color);
+  min-width: 100%;
+  z-index: 100; /* floats above other content */
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.dropdown-menu a:hover {
+  background-color: #B56A20;
+  color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex; /* shows on hover */
 }
