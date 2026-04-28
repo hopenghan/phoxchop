@@ -227,38 +227,15 @@ header nav a:hover {
   }
 
   .sidebar-toggle {
-    display: block; /* shows on mobile */
+    display: none;
   }
 
   .sidebar {
-    display: none !important; /* hidden by default on mobile */
-    position: fixed !important;
-    z-index: 200;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 260px;
-    box-shadow: 4px 0 12px rgba(0,0,0,0.15);
-    background-color: var(--sidebar-background);
-    flex-direction: column;
-    border: none;
-    border-radius: 0;
-    margin: 0;
-    padding: 40px 0 20px 0;
-    flex: initial;
-    overflow-y: auto;
-    min-width: initial;
-    border-right: none;
-    top: 0;
-    height: fit-content;
-  }
-
-  .sidebar.open {
-    display: flex !important;
+    display: none !important;
   }
 
   .dropdown-menu {
-    position: static; /* drops inline instead of floating */
+    position: static;
     width: 100%;
   }
 }
