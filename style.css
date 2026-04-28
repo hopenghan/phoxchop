@@ -158,7 +158,7 @@ header nav a:hover {
 .sidebar {
   flex: 1; /* wider */
   padding: 40px 0 20px 0; /* adjusted for link padding below */
-  display: flex;
+  display: none;
   flex-direction: column;
   position: sticky;
   top: 0;
@@ -213,6 +213,12 @@ header nav a:hover {
   font-size: 1rem;
   cursor: pointer;
   margin-bottom: 16px;
+}
+
+@media screen and (min-width: 1025px) {
+  .sidebar {
+    display: flex !important;
+  }
 }
 
 @media screen and (max-width: 1024px) {
