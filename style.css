@@ -141,24 +141,34 @@ header nav a:hover {
    ============================================= */
 
 /* Side-by-side layout using Flexbox */
-.layout-container {
+.page-wrapper {
   display: flex;
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content-col {
+  flex: 3;
+  padding: 60px 80px;
+  background-color: var(--background-color);
 }
 
 /* Style the sidebar */
 .sidebar {
-  flex: 1;
+  flex: 1; /* wider */
+  padding: 40px 0 20px 0; /* adjusted for link padding below */
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
   font-size: 1rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   min-width: 200px;
-  padding: 20px 0;
   border-right: 1px solid var(--light-grey);
-
-  display: flex;
-  flex-direction: column;
 
   /* Sticky: sidebar stays visible as you scroll */
   background-color: var(--sidebar-background);
@@ -181,7 +191,7 @@ header nav a:hover {
 .sidebar-nav a {
   display: block;
   width: 100%;
-  padding: 12px 20px;
+  padding: 12px 20px 12px 40px;
   color: var(--accent-color);
   font-weight: bold; /* bolded sidebar items */
   transition: 0.3s;
@@ -192,6 +202,43 @@ header nav a:hover {
 .sidebar-nav a:hover {
   background-color: var(--highlight-color);
   color: white;
+}
+
+.sidebar-toggle {
+  display: none; /* hidden on desktop */
+  background-color: var(--highlight-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: block; /* shows on mobile */
+  }
+
+  .sidebar {
+    display: none; /* hidden by default on mobile */
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 260px;
+    box-shadow: 4px 0 12px rgba(0,0,0,0.15);
+  }
+
+  .sidebar.open {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: static; /* drops inline instead of floating */
+    width: 100%;
+  }
 }
 
 /* Style the main content area */
@@ -256,7 +303,7 @@ main {
 
 .sidebar p {
   color: var(--text-color);
-  padding: 0 20px;
+  padding: 0 20px 0 40px;
   font-size: 0.9rem;  
 }
 
