@@ -231,8 +231,8 @@ header nav a:hover {
   }
 
   .sidebar {
-    display: none; /* hidden by default on mobile */
-    position: fixed;
+    display: none !important; /* hidden by default on mobile */
+    position: fixed !important;
     z-index: 200;
     top: 0;
     left: 0;
@@ -245,10 +245,16 @@ header nav a:hover {
     border-radius: 0;
     margin: 0;
     padding: 40px 0 20px 0;
+    flex: initial;
+    overflow-y: auto;
+    min-width: initial;
+    border-right: none;
+    top: 0;
+    height: fit-content;
   }
 
   .sidebar.open {
-    display: flex;
+    display: flex !important;
   }
 
   .dropdown-menu {
