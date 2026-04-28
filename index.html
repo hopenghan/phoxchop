@@ -16,6 +16,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 </head>
 
+<script>
+  function toggleSidebar() {
+    document.querySelector('.sidebar').classList.toggle('open');
+  }
+
+  function toggleDropdown(event) {
+    event.preventDefault(); // stops the # link from firing
+    const menu = document.getElementById('dropdown-menu');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+  // Close sidebar if user clicks outside it
+  document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('click', function(e) {
+      const sidebar = document.querySelector('.sidebar');
+      const toggle = document.querySelector('.sidebar-toggle');
+      if (sidebar && toggle && sidebar.classList.contains('open') && !sidebar.contains(e.target) && e.target !== toggle) {
+        sidebar.classList.remove('open');
+      }
+    });
+  });
+</script>
+
 <body>
 
   <!-- HEADER -->
@@ -28,8 +51,8 @@
     <nav>
       <a href="index.html">Home</a>
         <div class="dropdown">
-        <a href="#" class="dropdown-toggle">Personal Finance ▾</a>
-          <div class="dropdown-menu">
+        <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">Personal Finance ▾</a>
+          <div class="dropdown-menu" id="dropdown-menu">
           <a href="where-to-start.html">Where to start?</a>
           <a href="summary-of-investment.html">Investment Philosophy</a>
           <!-- add more links here as you write more pages -->

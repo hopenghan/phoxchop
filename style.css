@@ -226,12 +226,15 @@ header nav a:hover {
     padding: 20px;
   }
 
-  .sidebar-toggle {
-    display: none;
-  }
-
   .sidebar {
     display: none !important;
+    position: relative !important;
+    flex: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    min-width: 0 !important;
+    border-right: none !important;
+    top: auto !important;
   }
 
   .dropdown-menu {
