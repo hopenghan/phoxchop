@@ -215,7 +215,7 @@ header nav a:hover {
   margin-bottom: 16px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .page-wrapper {
     flex-direction: column;
     padding: 0;
