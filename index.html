@@ -16,29 +16,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 </head>
 
-<script>
-  function toggleSidebar() {
-    document.querySelector('.sidebar').classList.toggle('open');
-  }
-
-  function toggleDropdown(event) {
-    event.preventDefault(); // stops the # link from firing
-    const menu = document.getElementById('dropdown-menu');
-    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-  }
-
-  // Close sidebar if user clicks outside it
-  document.addEventListener('DOMContentLoaded', function() {
-    document.addEventListener('click', function(e) {
-      const sidebar = document.querySelector('.sidebar');
-      const toggle = document.querySelector('.sidebar-toggle');
-      if (sidebar && toggle && sidebar.classList.contains('open') && !sidebar.contains(e.target) && e.target !== toggle) {
-        sidebar.classList.remove('open');
-      }
-    });
-  });
-</script>
-
 <body>
 
   <!-- HEADER -->
@@ -76,6 +53,7 @@
 
   <!-- MAIN BODY -->
   <div class="content-col">
+    <button class="sidebar-toggle" onclick="toggleSidebar()">☰ Contents</button>
   <main>
     <article>
       <h2 id="About">About</h2>
@@ -136,7 +114,28 @@
     <a href="mailto:phoxchop@gmail.com" class="contact-btn">Contact Me</a>
   </footer>
 
+<script>
+  function toggleSidebar() {
+    document.querySelector('.sidebar').classList.toggle('open');
+  }
 
+  function toggleDropdown(event) {
+    event.preventDefault(); // stops the # link from firing
+    const menu = document.getElementById('dropdown-menu');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+  // Close sidebar if user clicks outside it
+  document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('click', function(e) {
+      const sidebar = document.querySelector('.sidebar');
+      const toggle = document.querySelector('.sidebar-toggle');
+      if (sidebar && toggle && sidebar.classList.contains('open') && !sidebar.contains(e.target) && e.target !== toggle) {
+        sidebar.classList.remove('open');
+      }
+    });
+  });
+</script>
 
 </body>
 </html>

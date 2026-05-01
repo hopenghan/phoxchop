@@ -158,7 +158,7 @@ header nav a:hover {
 .sidebar {
   flex: 1; /* wider */
   padding: 40px 0 20px 0; /* adjusted for link padding below */
-  display: none;
+  display: flex;
   flex-direction: column;
   position: sticky;
   top: 0;
@@ -216,8 +216,8 @@ header nav a:hover {
 }
 
 @media screen and (min-width: 1025px) {
-  .sidebar {
-    display: flex !important;
+  .dropdown:hover .dropdown-menu {
+    display: flex;
   }
 }
 
@@ -234,17 +234,25 @@ header nav a:hover {
 
   .sidebar {
     display: none !important;
-    visibility: hidden !important;
-    width: 0 !important;
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: none !important;
   }
 
-  .dropdown-menu {
-    position: static;
-    width: 100%;
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+
+  .sidebar-toggle {
+    display: block; /* shows the button on mobile */
+  }
+
+  .sidebar.open {
+    display: flex !important; /* shows sidebar when toggled */
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 260px;
+    box-shadow: 4px 0 12px rgba(0,0,0,0.15);
   }
 }
 
