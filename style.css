@@ -229,7 +229,7 @@ header nav a:hover {
 
   .content-col {
     display: block !important;
-    padding: 12px !important;
+    padding: 12px 24px 12px 16px !important; /* top right bottom left */
     width: 100% !important; 
     overflow-x: hidden;
     box-sizing: border-box;
