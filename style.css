@@ -245,9 +245,6 @@ header nav a:hover {
 }
 
 /* Style the main content area */
-main {
-  flex: 3;
-}
 
 /* Cards for posts */
 .post-section {
