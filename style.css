@@ -239,27 +239,11 @@ header nav a:hover {
   .dropdown:hover .dropdown-menu {
     display: flex;
   }
-
-  .sidebar-toggle {
-    display: block; /* shows the button on mobile */
-  }
-
-  .sidebar.open {
-    display: flex !important; /* shows sidebar when toggled */
-    position: fixed;
-    z-index: 200;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 260px;
-    box-shadow: 4px 0 12px rgba(0,0,0,0.15);
-  }
 }
 
 /* Style the main content area */
 main {
   flex: 3;
-  padding-left: 40px;
 }
 
 /* Cards for posts */
